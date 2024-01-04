@@ -3,7 +3,7 @@ package com.derrick.inventory.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="Products")
+@Table(name="products")
 public class Product {
     //define fields
     @Id

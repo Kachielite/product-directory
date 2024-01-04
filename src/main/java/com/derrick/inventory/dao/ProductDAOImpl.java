@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public class ProductDAOImpl implements ProductDAO{
     // define variable for entity manager
-    EntityManager entityManager;
+    private EntityManager entityManager;
 
     // construction injection
     @Autowired
@@ -26,7 +26,7 @@ public class ProductDAOImpl implements ProductDAO{
 
     @Override
     public List<Product> findAll() {
-        TypedQuery<Product> theQuery = entityManager.createQuery("From products", Product.class);
+        TypedQuery<Product> theQuery = entityManager.createQuery("From Product", Product.class);
         return theQuery.getResultList();
     }
 
